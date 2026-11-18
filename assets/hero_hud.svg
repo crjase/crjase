@@ -1,134 +1,142 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="420">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="100%" height="430">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#030508" />
-      <stop offset="50%" stop-color="#090d16" />
-      <stop offset="100%" stop-color="#0a1122" />
-    </linearGradient>
-    <linearGradient id="uncoverBtn" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00a8ff" />
-      <stop offset="50%" stop-color="#3b82f6" />
-      <stop offset="100%" stop-color="#6366f1" />
-    </linearGradient>
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="65%" stop-color="#bae6fd" />
-      <stop offset="100%" stop-color="#38bdf8" />
-    </linearGradient>
-    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.55" />
-      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#10b981" stop-opacity="0.45" />
-    </linearGradient>
-    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00a8ff" stop-opacity="0.28" />
-      <stop offset="100%" stop-color="#00a8ff" stop-opacity="0" />
+    <!-- Soft Ambient Aurora Orbs (fade to 0 before edges so zero cutout!) -->
+    <radialGradient id="orbBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a84ff" stop-opacity="0.28" />
+      <stop offset="55%" stop-color="#0a84ff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0a84ff" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    <radialGradient id="orbIndigo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5e5ce6" stop-opacity="0.26" />
+      <stop offset="55%" stop-color="#5e5ce6" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#5e5ce6" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="orb3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0.2" />
+    <radialGradient id="orbASD" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.16" />
+      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.05" />
       <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
     </radialGradient>
+
+    <!-- Unc0ver Signature Pill & Emblem Gradients -->
+    <linearGradient id="unc0verBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a84ff" />
+      <stop offset="100%" stop-color="#5e5ce6" />
+    </linearGradient>
+    <linearGradient id="glassFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c2333" stop-opacity="0.72" />
+      <stop offset="100%" stop-color="#111622" stop-opacity="0.58" />
+    </linearGradient>
+    <linearGradient id="glassStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#0a84ff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06" />
+    </linearGradient>
+    <linearGradient id="shimmerLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
     <style>
-      .mono { font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif; }
-      .pulse { animation: pulseA 2s ease-in-out infinite; }
-      .sweep { transform-origin: 995px 185px; animation: spin 6s linear infinite; }
-      .ringPulse { transform-origin: 995px 185px; animation: ringExpand 3s ease-out infinite; }
-      .bar1 { animation: eq1 1.4s ease-in-out infinite; transform-origin: bottom; }
-      .bar2 { animation: eq2 1.1s ease-in-out infinite; transform-origin: bottom; }
-      .bar3 { animation: eq3 1.6s ease-in-out infinite; transform-origin: bottom; }
-      .bar4 { animation: eq4 1.25s ease-in-out infinite; transform-origin: bottom; }
-      @keyframes pulseA { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
-      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      @keyframes ringExpand {
-        0% { transform: scale(0.45); opacity: 0.8; }
-        100% { transform: scale(1.15); opacity: 0; }
+      .sf { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif; }
+      .mono { font-family: 'SF Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .orbFloat1 { animation: float1 9s ease-in-out infinite; }
+      .orbFloat2 { animation: float2 11s ease-in-out infinite; }
+      .btnGlow { animation: btnPulse 3.2s ease-in-out infinite; }
+      .cursorBlink { animation: blink 1.1s steps(2, start) infinite; }
+      .glassSweep { animation: sweepX 6s ease-in-out infinite; }
+      @keyframes float1 {
+        0%, 100% { transform: translate(0px, 0px); }
+        50% { transform: translate(28px, 14px); }
       }
-      @keyframes eq1 { 0%, 100% { height: 14px; y: 344px; } 50% { height: 28px; y: 330px; } }
-      @keyframes eq2 { 0%, 100% { height: 24px; y: 334px; } 50% { height: 10px; y: 348px; } }
-      @keyframes eq3 { 0%, 100% { height: 18px; y: 340px; } 50% { height: 30px; y: 328px; } }
-      @keyframes eq4 { 0%, 100% { height: 28px; y: 330px; } 50% { height: 14px; y: 344px; } }
+      @keyframes float2 {
+        0%, 100% { transform: translate(0px, 0px); }
+        50% { transform: translate(-24px, -16px); }
+      }
+      @keyframes btnPulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.84; }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes sweepX {
+        0%, 100% { transform: translateX(-180px); opacity: 0; }
+        50% { transform: translateX(380px); opacity: 0.65; }
+      }
     </style>
   </defs>
 
-  <!-- Background & Ambient Glows -->
-  <rect width="1200" height="420" rx="20" fill="url(#bg)" />
-  <circle cx="180" cy="90" r="220" fill="url(#orb1)" />
-  <circle cx="980" cy="140" r="240" fill="url(#orb2)" />
-  <circle cx="620" cy="370" r="190" fill="url(#orb3)" />
-  <rect x="1.5" y="1.5" width="1197" height="417" rx="19" fill="none" stroke="url(#glassBorder)" stroke-width="1.8" />
+  <!-- Seamless Transparent Canvas with Floating Ambient Auras -->
+  <circle class="orbFloat1" cx="310" cy="200" r="220" fill="url(#orbBlue)" />
+  <circle class="orbFloat2" cx="860" cy="215" r="230" fill="url(#orbIndigo)" />
+  <circle cx="590" cy="250" r="190" fill="url(#orbASD)" />
 
-  <!-- Top Unc0ver-style App Bar -->
-  <rect x="28" y="22" width="1144" height="44" rx="12" fill="#0f1523" fill-opacity="0.85" stroke="#1e293b" stroke-width="1" />
-  <circle class="pulse" cx="52" cy="44" r="5.5" fill="#10b981" />
-  <text x="68" y="49" class="mono" font-size="13" font-weight="700" fill="#10b981" letter-spacing="1.2">ROOT_ENV // OPERATIONAL</text>
-  <text x="330" y="49" class="mono" font-size="12" fill="#94a3b8">CALLSIGN: CRJASE</text>
-  <text x="530" y="49" class="mono" font-size="12" fill="#38bdf8" font-weight="700">AGE: 19</text>
-  <text x="650" y="49" class="mono" font-size="12" fill="#94a3b8">THEATRE: AUSTRALIA (AU)</text>
-  <rect x="978" y="31" width="176" height="26" rx="13" fill="#1e293b" />
-  <text x="1066" y="48" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#e2e8f0">v2.6 // SPEC-OPS HUD</text>
+  <!-- Main Unc0ver Frosted Glass Container (Blends into GitHub dark bg) -->
+  <rect x="30" y="24" width="1140" height="382" rx="26" fill="url(#glassFill)" stroke="url(#glassStroke)" stroke-width="1.4" />
+  <rect class="glassSweep" x="220" y="24" width="260" height="1.5" fill="url(#shimmerLine)" />
 
-  <!-- Left Hero Title & Unc0ver Console -->
-  <rect x="28" y="84" width="760" height="252" rx="18" fill="#0c1220" fill-opacity="0.88" stroke="#1e293b" stroke-width="1.2" />
+  <!-- Top iOS-style Header Strip -->
+  <text x="64" y="64" class="sf" font-size="13" font-weight="600" fill="#8e8e93" letter-spacing="0.4">crjase // sovereign systems</text>
+  <rect x="928" y="44" width="212" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.1" />
+  <circle cx="946" cy="58" r="4" fill="#10b981" />
+  <text x="1040" y="62" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#e5e7eb">AU • AGE 19 • ASD-ALIGNED</text>
 
-  <!-- Squircle App Icon Emblem -->
-  <rect x="48" y="104" width="66" height="66" rx="16" fill="url(#uncoverBtn)" />
-  <text x="81" y="149" text-anchor="middle" class="mono" font-size="34" font-weight="800" fill="#ffffff">C_</text>
+  <!-- Left Column: Unc0ver App Identity & Action Pill -->
+  <rect x="64" y="92" width="76" height="76" rx="20" fill="url(#unc0verBlue)" />
+  <text x="102" y="143" text-anchor="middle" class="sf" font-size="40" font-weight="800" fill="#ffffff">u0</text>
 
-  <text x="132" y="138" class="sans" font-size="44" font-weight="800" fill="url(#titleGrad)" letter-spacing="2">CRJASE</text>
-  <text x="134" y="164" class="mono" font-size="13.5" font-weight="600" fill="#38bdf8" letter-spacing="1.2">
-    SOVEREIGN SYSTEMS  •  RF &amp; EMBEDDED  •  CYBER ENGINEERING
+  <text x="160" y="128" class="sf" font-size="44" font-weight="800" fill="#ffffff" letter-spacing="-0.5">crjase</text>
+  <text x="162" y="158" class="sf" font-size="16" font-weight="500" fill="#98989d">
+    Hardened Linux • Embedded &amp; RF • Low-Level C++
   </text>
 
-  <!-- Live Jailbreak-Style Terminal Console -->
-  <rect x="48" y="186" width="720" height="132" rx="12" fill="#05080f" stroke="#1e293b" stroke-width="1.2" />
-  <text x="64" y="210" class="mono" font-size="12.5" fill="#64748b">[*] init_operator(handle="crjase", age=19, region="AU")</text>
-  <text x="64" y="232" class="mono" font-size="12.5" fill="#10b981">[+] kernel_state: Arch linux-hardened + Hyprland [VERIFIED]</text>
-  <text x="64" y="254" class="mono" font-size="12.5" fill="#38bdf8">[+] hw_rf_bus: RP2040 Pico SDK + HackRF One SDR + Flipper Zero</text>
-  <text x="64" y="276" class="mono" font-size="12.5" fill="#818cf8">[+] sovereign_ai: Custom C++ Tensors + Offline llama-server</text>
-  <text x="64" y="298" class="mono" font-size="12.5" fill="#f59e0b">[!] telemetry_filter: AI-assisted Rust/Svelte repos excluded</text>
+  <!-- iOS Control Center Style Status Toggles (2x2 Glass Pills) -->
+  <rect x="64" y="192" width="212" height="58" rx="16" fill="#ffffff" fill-opacity="0.045" stroke="#ffffff" stroke-opacity="0.09" />
+  <text x="82" y="216" class="sf" font-size="12" font-weight="600" fill="#98989d">Kernel</text>
+  <text x="82" y="236" class="mono" font-size="12.5" font-weight="700" fill="#ffffff">Arch Hardened</text>
+  <rect x="224" y="210" width="36" height="20" rx="10" fill="#30d158" />
+  <circle cx="250" cy="220" r="7.5" fill="#ffffff" />
 
-  <!-- Bottom Unc0ver Action Pill Bar -->
-  <rect x="28" y="352" width="330" height="44" rx="22" fill="url(#uncoverBtn)" />
-  <text x="193" y="379" text-anchor="middle" class="sans" font-size="15" font-weight="700" fill="#ffffff" letter-spacing="0.8">STATUS: READY FOR TASKING</text>
+  <rect x="290" y="192" width="212" height="58" rx="16" fill="#ffffff" fill-opacity="0.045" stroke="#ffffff" stroke-opacity="0.09" />
+  <text x="308" y="216" class="sf" font-size="12" font-weight="600" fill="#98989d">RF &amp; Embedded</text>
+  <text x="308" y="236" class="mono" font-size="12.5" font-weight="700" fill="#ffffff">RP2040 • HackRF</text>
+  <rect x="450" y="210" width="36" height="20" rx="10" fill="#0a84ff" />
+  <circle cx="476" cy="220" r="7.5" fill="#ffffff" />
 
-  <rect x="374" y="352" width="130" height="44" rx="14" fill="#111827" stroke="#38bdf8" stroke-width="1.2" />
-  <text x="439" y="379" text-anchor="middle" class="mono" font-size="13" font-weight="700" fill="#38bdf8">AGE // 19</text>
+  <rect x="64" y="264" width="212" height="58" rx="16" fill="#ffffff" fill-opacity="0.045" stroke="#ffffff" stroke-opacity="0.09" />
+  <text x="82" y="288" class="sf" font-size="12" font-weight="600" fill="#98989d">Sovereign AI</text>
+  <text x="82" y="308" class="mono" font-size="12.5" font-weight="700" fill="#ffffff">C++ / llama.cpp</text>
+  <rect x="224" y="282" width="36" height="20" rx="10" fill="#5e5ce6" />
+  <circle cx="250" cy="292" r="7.5" fill="#ffffff" />
 
-  <rect x="518" y="352" width="135" height="44" rx="14" fill="#111827" stroke="#1e293b" stroke-width="1.2" />
-  <text x="585" y="379" text-anchor="middle" class="mono" font-size="13" font-weight="600" fill="#e2e8f0">C++20 / C</text>
+  <rect x="290" y="264" width="212" height="58" rx="16" fill="#ffffff" fill-opacity="0.045" stroke="#ffffff" stroke-opacity="0.09" />
+  <text x="308" y="288" class="sf" font-size="12" font-weight="600" fill="#98989d">Operator</text>
+  <text x="308" y="308" class="mono" font-size="12.5" font-weight="700" fill="#10b981">Age 19 • AU</text>
+  <rect x="450" y="282" width="36" height="20" rx="10" fill="#10b981" />
+  <circle cx="476" cy="292" r="7.5" fill="#ffffff" />
 
-  <rect x="667" y="352" width="121" height="44" rx="14" fill="#111827" stroke="#10b981" stroke-width="1.2" />
-  <text x="727" y="379" text-anchor="middle" class="mono" font-size="13" font-weight="700" fill="#10b981">ZERO-CLOUD</text>
+  <!-- Unc0ver Signature Primary Action Pill -->
+  <rect class="btnGlow" x="64" y="338" width="438" height="46" rx="16" fill="url(#unc0verBlue)" />
+  <text x="283" y="366" text-anchor="middle" class="sf" font-size="15.5" font-weight="700" fill="#ffffff" letter-spacing="0.3">
+    Operational • Zero-Cloud First Principles
+  </text>
 
-  <!-- Right Side Tactical Radar + Spectrum Card -->
-  <rect x="810" y="84" width="362" height="312" rx="18" fill="#0c1220" fill-opacity="0.88" stroke="#1e293b" stroke-width="1.2" />
-  <text x="832" y="112" class="mono" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1.2">SIGINT // RF SPECTRUM</text>
+  <!-- Right Column: Unc0ver Live Exploit / Boot Log Card -->
+  <rect x="530" y="92" width="610" height="292" rx="20" fill="#080b12" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.1" />
+  <circle cx="554" cy="116" r="5" fill="#ff453a" />
+  <circle cx="572" cy="116" r="5" fill="#ffd60a" />
+  <circle cx="590" cy="116" r="5" fill="#30d158" />
+  <text x="612" y="120" class="mono" font-size="11.5" fill="#8e8e93">unc0ver_env — zsh — 80×24</text>
+  <line x1="530" y1="136" x2="1140" y2="136" stroke="#ffffff" stroke-opacity="0.07" />
 
-  <circle cx="995" cy="185" r="90" fill="none" stroke="#1e293b" stroke-width="1.5" />
-  <circle cx="995" cy="185" r="58" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
-  <circle cx="995" cy="185" r="28" fill="none" stroke="#1e293b" stroke-width="1" />
-  <circle class="ringPulse" cx="995" cy="185" r="88" fill="none" stroke="#00a8ff" stroke-width="1.5" />
-  <line x1="898" y1="185" x2="1092" y2="185" stroke="#1e293b" stroke-width="1" />
-  <line x1="995" y1="88" x2="995" y2="282" stroke="#1e293b" stroke-width="1" />
-
-  <g class="sweep">
-    <path d="M 995 185 L 995 95 A 90 90 0 0 1 1068 132 Z" fill="#00a8ff" fill-opacity="0.22" />
-    <line x1="995" y1="185" x2="995" y2="95" stroke="#38bdf8" stroke-width="2.2" />
-  </g>
-  <circle class="pulse" cx="1034" cy="146" r="4.5" fill="#38bdf8" />
-  <circle class="pulse" cx="955" cy="218" r="4" fill="#10b981" />
-  <circle cx="995" cy="185" r="4.5" fill="#ffffff" />
-
-  <!-- Animated Equalizer / Signal Bars -->
-  <text x="832" y="348" class="mono" font-size="11.5" fill="#94a3b8">RF LOCK</text>
-  <rect class="bar1" x="910" y="344" width="12" height="14" rx="3" fill="#00a8ff" />
-  <rect class="bar2" x="928" y="334" width="12" height="24" rx="3" fill="#3b82f6" />
-  <rect class="bar3" x="946" y="340" width="12" height="18" rx="3" fill="#6366f1" />
-  <rect class="bar4" x="964" y="330" width="12" height="28" rx="3" fill="#10b981" />
-  <text x="1148" y="348" text-anchor="end" class="mono" font-size="11.5" font-weight="700" fill="#10b981">NOMINAL</text>
+  <text x="552" y="166" class="mono" font-size="13" fill="#8e8e93">[*] Initializing operator profile: crjase (age=19, region=AU)</text>
+  <text x="552" y="194" class="mono" font-size="13" fill="#0a84ff">[+] Kernel: Arch linux-hardened + Hyprland verified</text>
+  <text x="552" y="222" class="mono" font-size="13" fill="#30d158">[+] Infra: Debian 13 VPS • Nginx • Syncthing • SFTPGo</text>
+  <text x="552" y="250" class="mono" font-size="13" fill="#5e5ce6">[+] Hardware: RP2040 Pico SDK • HackRF One • Flipper Zero</text>
+  <text x="552" y="278" class="mono" font-size="13" fill="#64d2ff">[+] Core ML: Custom C++ Tensor/Backprop + llama-server</text>
+  <text x="552" y="306" class="mono" font-size="13" fill="#ffd60a">[!] Filter: AI-assisted Rust/Svelte repos excluded from stats</text>
+  <text x="552" y="344" class="mono" font-size="13" fill="#ffffff">[+] Ready. Standing by for ASD / Defence cyber &amp; systems.</text>
+  <rect class="cursorBlink" x="1032" y="331" width="8" height="16" rx="2" fill="#0a84ff" />
 </svg>

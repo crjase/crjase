@@ -1,35 +1,37 @@
-[readme.md](https://github.com/user-attachments/files/35029752/readme.md)
+[readme.md](https://github.com/user-attachments/files/35030160/readme.md)
 
 
 [](https://crjase.net)
 
    [](https://crjase.net)  
 
-   
+---
 
-
+### `01 // OPERATOR BRIEFING & SOVEREIGN DOCTRINE`
 
 > [!IMPORTANT]
-> **SOVEREIGNTY & FIRST PRINCIPLES (AGE 19 · AUSTRALIA):** Every core system is engineered to run locally, deterministically, and without cloud dependencies—from hardened Linux workstations and self-hosted VPS infrastructure to bare-metal RP2040 firmware, SDR/RF tooling, and from-scratch C++ neural networks.
+> **FIRST-PRINCIPLES ENGINEERING (AGE 19 · AUSTRALIA):** Every core system is built to run locally, deterministically, and without cloud dependencies—from hardened Arch Linux workstations and self-hosted Debian VPS infrastructure to bare-metal RP2040 firmware, SDR/RF tooling, and from-scratch C++ neural networks.
 
 ```yaml
 callsign: crjase
 age: 19
-theatre: Australia
+location: Australia
 core_languages: [C++, C, Python, Bash, Kotlin]
-operating_doctrine:
-  - Zero-Cloud Autonomy: Self-hosted Nginx, Syncthing, SFTPGo, and offline llama-server inference
-  - Bare-Metal to Kernel: RP2040/AVR microcontrollers up through Arch linux-hardened
-  - Signal Over Noise: AI-assisted prototypes (e.g. Rust/Svelte) filtered from core language telemetry
+doctrine:
+  - Sovereign Offline-First: Self-hosted Nginx, Syncthing, SFTPGo, offline llama-server
+  - Bare-Metal to Kernel: RP2040 / AVR microcontrollers up through Arch linux-hardened
+  - Signal Over Noise: AI-assisted prototypes (e.g. Rust/Svelte) excluded from language stats
 ```
 
-| Pillar | Engineering Standard | Applied Focus |
+| Engineering Pillar | Standard | Applied Focus |
 | :--- | :--- | :--- |
-| **Zero-Cloud Autonomy** | Deterministic, self-hosted, air-gap capable | Debian VPS, Nginx, PHP-FPM, `llama-server`, local encrypted comms |
+| **Zero-Cloud Autonomy** | Deterministic, self-hosted, air-gap ready | Debian 13 VPS, Nginx, PHP-FPM, `llama-server`, local encrypted comms |
 | **Hardened Systems** | Minimal attack surface, reproducible builds | Arch (`linux-hardened`), Hyprland, CMake, shell automation |
 | **Physical-to-Cyber** | Bridging hardware, RF, and network layers | HackRF One SDR, Flipper Zero, RP2040 SDK, access control & IP video |
 
+---
 
+### `02 // CAPABILITY BENTO & ARCHITECTURE`
 
 
 
@@ -56,13 +58,15 @@ flowchart LR
         OP3["Audio DSP / Demucs"]
     end
     L1 --> L2 --> L3 --> L4
-    style L1 fill:#090d16,stroke:#10b981,color:#f8fafc
-    style L2 fill:#090d16,stroke:#00a8ff,color:#f8fafc
-    style L3 fill:#090d16,stroke:#6366f1,color:#f8fafc
-    style L4 fill:#090d16,stroke:#f59e0b,color:#f8fafc
+    style L1 fill:#111622,stroke:#10b981,color:#f8fafc
+    style L2 fill:#111622,stroke:#0a84ff,color:#f8fafc
+    style L3 fill:#111622,stroke:#5e5ce6,color:#f8fafc
+    style L4 fill:#111622,stroke:#ff9f0a,color:#f8fafc
 ```
 
+---
 
+### `03 // HARDWARE, RF & TOOLCHAIN LOADOUT`
 
 | Category | Hardware / Platform | Operational Role |
 | :--- | :--- | :--- |
@@ -84,7 +88,9 @@ flowchart LR
 
 [](https://skillicons.dev)
 
+---
 
+### `04 // SELECTED FIELD SYSTEMS`
 
 | System | Language | Stars | Operational Focus |
 | :--- | :---: | :---: | :--- |
@@ -94,14 +100,14 @@ flowchart LR
 | [**GHome**](https://github.com/crjase/GHome) |  |  | Automated local network discovery & device control |
 | [JC-Time](https://www.google.com/search?q=https://github.com/crjase/JC-Time) |  |  | Native Android utility built from scratch |
 
+---
 
+### `05 // LIVE TELEMETRY (AI-FILTERED)`
 
 
 
 [](https://github.com/crjase) [](https://github.com/crjase)
 
 [](https://github.com/crjase)
-
-
 
 

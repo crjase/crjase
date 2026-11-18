@@ -1,9 +1,11 @@
-[readme.md](https://github.com/user-attachments/files/35030160/readme.md)
+[readme_raw.txt](https://github.com/user-attachments/files/35030550/readme_raw.txt)
 
 
 [](https://crjase.net)
 
    [](https://crjase.net)  
+
+   
 
 ---
 
@@ -37,24 +39,24 @@ doctrine:
 
 ```mermaid
 flowchart LR
-    subgraph L1["01 // HARDWARE & RF LAYER"]
+    subgraph L1["01 // HARDWARE & RF"]
         HW1["RP2040 Pico SDK / AVR"]
         HW2["HackRF One + PortaPack"]
         HW3["Flipper Zero / SMD"]
     end
-    subgraph L2["02 // HARDENED OS & INFRA"]
+    subgraph L2["02 // HARDENED OS"]
         OS1["Arch linux-hardened"]
         OS2["Debian 13 VPS / Nginx"]
         OS3["Syncthing / SFTPGo"]
     end
-    subgraph L3["03 // CORE ENGINEERING"]
+    subgraph L3["03 // CORE CODE"]
         C1["C++20 / C"]
         C2["Python / Bash"]
         C3["Kotlin / Qt Android"]
     end
-    subgraph L4["04 // SOVEREIGN OPS & LABS"]
+    subgraph L4["04 // SOVEREIGN OPS"]
         OP1["C++ Tensor ML & llama-server"]
-        OP2["Network & OpSec Tooling"]
+        OP2["Network & OpSec Tools"]
         OP3["Audio DSP / Demucs"]
     end
     L1 --> L2 --> L3 --> L4
@@ -77,14 +79,9 @@ flowchart LR
 | **Local AI** | `llama-server`, Hermes Agent, Custom C++ Tensor Engine | Offline inference & from-scratch neural network R&D |
 | **Audio & Signal Lab** | REAPER, Bitwig Studio, Demucs | Low-latency Linux audio routing & stem isolation |
 
-&lt;details&gt;
-&lt;summary&gt;&lt;b&gt;EXPAND FULL ENVIRONMENT &amp;amp; BUILD TOOLCHAIN SPECS&lt;/b&gt;&lt;/summary&gt;
-
 * **Compilers & Build Systems:** `gcc`/`g++` (C++20), `clang`, `CMake`, Raspberry Pi Pico SDK, Android SDK + Qt
 * **Network & Server Ops:** Nginx, PHP-FPM, dynamic DNS tooling, IPv4/IPv6 packet-level diagnostics, self-hosted chat/file relays
 * **Physical Security & Field:** Electrical assembly, technical cabling, access control hardware, IP camera network architecture
-
-&lt;/details&gt;
 
 [](https://skillicons.dev)
 

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" width="100%" height="210">
+  <defs>
+    <linearGradient id="tBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <style>
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="210" rx="18" fill="url(#tBg)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Top Telemetry Header -->
+  <text x="28" y="38" class="mono" font-size="13" font-weight="700" fill="#38bdf8" letter-spacing="1.2">TELEMETRY_INTEGRITY // AI-ASSISTED NOISE FILTER</text>
+  <rect x="970" y="20" width="202" height="26" rx="13" fill="#064e3b" />
+  <text x="1071" y="37" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#34d399">VERIFIED CORE CODE</text>
+
+  <!-- 3 KPI Cards -->
+  <rect x="28" y="60" width="220" height="62" rx="12" fill="#05080f" stroke="#0ea5e9" stroke-width="1.2" />
+  <text x="46" y="84" class="mono" font-size="11" fill="#64748b">OPERATOR AGE</text>
+  <text x="46" y="108" class="sans" font-size="22" font-weight="800" fill="#38bdf8">19 YEARS</text>
+
+  <rect x="266" y="60" width="260" height="62" rx="12" fill="#05080f" stroke="#1e293b" stroke-width="1.2" />
+  <text x="284" y="84" class="mono" font-size="11" fill="#64748b">EXCLUDED FROM STATS</text>
+  <text x="284" y="108" class="mono" font-size="14" font-weight="700" fill="#f59e0b">Rust / Svelte / HTML</text>
+
+  <rect x="544" y="60" width="628" height="62" rx="12" fill="#05080f" stroke="#1e293b" stroke-width="1.2" />
+  <text x="562" y="84" class="mono" font-size="11" fill="#64748b">FILTER REASON</text>
+  <text x="562" y="107" class="sans" font-size="13.5" fill="#e2e8f0">TransparentTorProxy-GUI (Rust) &amp; crjase.github.io excluded to preserve pure C++/C/Python metrics.</text>
+
+  <!-- Core Language Distribution Bar -->
+  <text x="28" y="154" class="mono" font-size="11.5" fill="#94a3b8">CORE HAND-WRITTEN STACK WEIGHTING</text>
+  <rect x="28" y="166" width="1144" height="16" rx="8" fill="#1e293b" />
+  <rect x="28" y="166" width="820" height="16" rx="8" fill="#00a8ff" />
+  <rect x="840" y="166" width="130" height="16" fill="#6366f1" />
+  <rect x="970" y="166" width="120" height="16" fill="#10b981" />
+  <rect x="1090" y="166" width="82" height="16" rx="8" fill="#f59e0b" />
+
+  <text x="28" y="198" class="mono" font-size="11" fill="#38bdf8">● C++ (Primary Systems/ML)</text>
+  <text x="250" y="198" class="mono" font-size="11" fill="#a5b4fc">● C (Embedded/Low-Level)</text>
+  <text x="460" y="198" class="mono" font-size="11" fill="#34d399">● Python (Automation/Net)</text>
+  <text x="670" y="198" class="mono" font-size="11" fill="#fbbf24">● Bash / Kotlin</text>
+</svg>
